@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web1
+  name: web2
   labels:
-    app: web1
+    app: web2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: web1
+      app: web2
   template:
     metadata:
       labels:
-        app: web1
+        app: web2
     spec:
       imagePullSecrets:
         - name: secret1
@@ -30,14 +30,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web1
+  name: web2
   labels:
-    app: web1
+    app: web2
 spec:
   ports:
   - port: 5000
     protocol: TCP
     targetPort: 5000
   selector:
-    app: web1
+    app: web2
   type: LoadBalancer
