@@ -18,7 +18,7 @@ spec:
         - name: secret1
       containers:
       - name: kub
-        image: docker.io/hemanth42079/kub:flask_mongo_auth_app
+        image: docker.io/hemanth42079/nodejsapp
         resources:
           requests:
             memory: "256Mi"
